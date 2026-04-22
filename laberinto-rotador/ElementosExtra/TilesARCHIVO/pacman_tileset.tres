@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/tiles/pacman_tileset.png" id=1]
+
+[resource]
+tile_size = Vector2i(16, 16)
+
+[sources]
+
+[sources/0]
+type = "TileSetAtlasSource"
+texture = ExtResource("1")
+margins = Vector2i(0, 0)
+separation = Vector2i(0, 0)
+texture_region_size = Vector2i(16, 16)
