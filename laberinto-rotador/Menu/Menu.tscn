@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://c7nb47my4lb1q"]
+
+[ext_resource type="Texture2D" uid="uid://dwfeyvc8unsre" path="res://ElementosExtra/jaja/ChatGPT Image 25 abr 2026, 21_39_42.png" id="1_cx167"]
+[ext_resource type="Script" uid="uid://8vnnnqtehtql" path="res://Menu/menu.gd" id="1_n4eug"]
+[ext_resource type="FontFile" uid="uid://bmwjb8n0kttcl" path="res://ElementosExtra/jaja/Pixel Simpel/PixelSimpel.otf" id="2_dolsu"]
+[ext_resource type="FontFile" uid="uid://c6sro0iucmiss" path="res://ElementosExtra/TilesIMAGENES/tiles/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_n4eug"]
+[ext_resource type="FontFile" uid="uid://dsxbhjj2mgndh" path="res://ElementosExtra/jaja/Pixel Lofi/Pixel Lofi.otf" id="4_dlksc"]
+[ext_resource type="PackedScene" uid="uid://bxo0lonyla8w2" path="res://Laberintos/LaberintoMENU/LaberintoMENU.tscn" id="5_dolsu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hcwhg"]
+font = ExtResource("2_dolsu")
+font_size = 60
+font_color = Color(1, 0.6784314, 0.20392157, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0.65882355, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5p1lm"]
+font = ExtResource("3_n4eug")
+font_size = 90
+font_color = Color(1, 0.6784314, 0.20392157, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0.9411765, 0.9254902)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4eug"]
+font = ExtResource("3_n4eug")
+font_size = 90
+font_color = Color(1, 0.6784314, 0.20392157, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0.9411765, 0.9254902)
+
+[node name="Manu" type="Control" unique_id=216071977]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n4eug")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=175514676]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 720.0
+texture = ExtResource("1_cx167")
+expand_mode = 2
+
+[node name="Titulo" type="Control" parent="." unique_id=1607544341]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Giratorio" type="Label" parent="Titulo" unique_id=710128705]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 64.0
+offset_right = 655.0
+offset_bottom = 323.0
+text = "GIRATORIO
+"
+label_settings = SubResource("LabelSettings_hcwhg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Escape" type="Label" parent="Titulo" unique_id=577851102]
+layout_mode = 0
+offset_top = 35.0
+offset_right = 721.0
+offset_bottom = 220.0
+text = "ESCAPE
+"
+label_settings = SubResource("LabelSettings_5p1lm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Niveles" type="Control" parent="." unique_id=363956622]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nivel1" type="Button" parent="Niveles" unique_id=679098314]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 287.0
+offset_right = 672.0
+offset_bottom = 334.0
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(1, 0.6784314, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("4_dlksc")
+theme_override_font_sizes/font_size = 30
+text = "NIVEL FACIL"
+flat = true
+
+[node name="Nivel2" type="Button" parent="Niveles" unique_id=1780859298]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 384.0
+offset_right = 683.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(1, 0.6784314, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("4_dlksc")
+theme_override_font_sizes/font_size = 30
+text = "NIVEL MEDIO"
+flat = true
+
+[node name="Nivel3" type="Button" parent="Niveles" unique_id=1211205831]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 475.0
+offset_right = 669.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(1, 0.6784314, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("4_dlksc")
+theme_override_font_sizes/font_size = 30
+text = "NIVEL DIFICIL"
+flat = true
+
+[node name="Label" type="Label" parent="." unique_id=15018269]
+layout_mode = 0
+offset_right = 718.0
+offset_bottom = 251.0
+text = "ESCAPE
+"
+label_settings = SubResource("LabelSettings_n4eug")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=321543570]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 276.0
+offset_right = 321.0
+offset_bottom = 626.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=214353768]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(258, 258)
+render_target_update_mode = 4
+
+[node name="Laberinto1" parent="SubViewportContainer/SubViewport" unique_id=168163577 instance=ExtResource("5_dolsu")]
+position = Vector2(-163, -165)
+
+[connection signal="pressed" from="Niveles/Nivel1" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="Niveles/Nivel2" to="." method="_on_nivel_2_pressed"]
+[connection signal="pressed" from="Niveles/Nivel3" to="." method="_on_nivel_3_pressed"]

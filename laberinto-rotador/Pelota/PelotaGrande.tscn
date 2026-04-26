@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://081no31aptu7"]
+[gd_scene format=3 uid="uid://c20sp3qdt3qxo"]
 
-[ext_resource type="Texture2D" uid="uid://d1csbe5r0k60i" path="res://ElementosExtra/jaja/GlowingBall Blue 22frames RPG.png" id="1_xod27"]
+[ext_resource type="Texture2D" uid="uid://d1csbe5r0k60i" path="res://ElementosExtra/jaja/GlowingBall Blue 22frames RPG.png" id="1_0tjs8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_omhlp"]
 bounce = 0.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xod27"]
-radius = 8.0
+radius = 7.0
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=133745808]
 physics_material_override = SubResource("PhysicsMaterial_omhlp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1717422057]
-position = Vector2(404.5, 280.2539)
-scale = Vector2(0.11718749, 0.11718749)
-texture = ExtResource("1_xod27")
+position = Vector2(430, 276)
+scale = Vector2(0.11328089, 0.11093146)
+texture = ExtResource("1_0tjs8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1110928465]
-position = Vector2(404, 280)
+position = Vector2(430, 276)
 shape = SubResource("CircleShape2D_xod27")
