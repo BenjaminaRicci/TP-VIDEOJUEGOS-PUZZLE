@@ -2,20 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://d1csbe5r0k60i" path="res://ElementosExtra/jaja/GlowingBall Blue 22frames RPG.png" id="1_cypvk"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_omhlp"]
-bounce = 0.8
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_xod27"]
 radius = 4.0
 
-[node name="RigidBody2D" type="RigidBody2D" unique_id=133745808]
-physics_material_override = SubResource("PhysicsMaterial_omhlp")
+[node name="PelotaChica" type="Node2D" unique_id=201404413]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1717422057]
-position = Vector2(427.37503, 273.32907)
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1162302854]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=2071532653]
+position = Vector2(-268.375, -217.294)
 scale = Vector2(0.07226552, 0.07076674)
 texture = ExtResource("1_cypvk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1110928465]
-position = Vector2(427, 273)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=2100698115]
+position = Vector2(-268.75, -217.62308)
 shape = SubResource("CircleShape2D_xod27")

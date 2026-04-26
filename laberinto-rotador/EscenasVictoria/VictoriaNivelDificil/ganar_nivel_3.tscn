@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bne7xyhsa3aj2"]
 
-[ext_resource type="Script" uid="uid://btnlqtuottye3" path="res://ganar_nivel_3.gd" id="1_8xbim"]
+[ext_resource type="Script" uid="uid://btnlqtuottye3" path="res://EscenasVictoria/VictoriaNivelDificil/ganar_nivel_3.gd" id="1_8xbim"]
 [ext_resource type="Texture2D" uid="uid://dwfeyvc8unsre" path="res://ElementosExtra/jaja/ChatGPT Image 25 abr 2026, 21_39_42.png" id="2_vst7q"]
 [ext_resource type="FontFile" uid="uid://bmwjb8n0kttcl" path="res://ElementosExtra/jaja/Pixel Simpel/PixelSimpel.otf" id="3_58uft"]
 [ext_resource type="FontFile" uid="uid://c6sro0iucmiss" path="res://ElementosExtra/TilesIMAGENES/tiles/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="4_m5uje"]

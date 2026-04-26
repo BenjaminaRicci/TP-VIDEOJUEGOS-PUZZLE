@@ -147,11 +147,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Volver" type="Button" parent="Titulo" unique_id=698660444]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.375
-anchor_right = 0.375
+[node name="Button" type="Button" parent="Titulo" unique_id=698660444]
+layout_mode = 0
 offset_left = 598.0
 offset_top = 681.0
 offset_right = 705.0
@@ -163,16 +160,4 @@ text = "VOLVER"
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="REINICIAR" type="Button" parent="Titulo" unique_id=79139775]
-layout_mode = 0
-offset_top = 681.0
-offset_right = 141.0
-offset_bottom = 720.0
-theme_override_colors/font_color = Color(1, 0.6784314, 0.20392157, 1)
-theme_override_fonts/font = ExtResource("6_ydqn3")
-theme_override_font_sizes/font_size = 30
-text = "REINICIAR"
-flat = true
-
-[connection signal="pressed" from="Titulo/Volver" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Titulo/REINICIAR" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="Titulo/Button" to="." method="_on_button_pressed"]
