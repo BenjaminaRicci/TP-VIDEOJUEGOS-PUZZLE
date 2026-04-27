@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
-	$Control.setearTimer(Global.tiempoMinutos, Global.tiempoSegundos)
+	$Control.setearTimer(Global.tiempoMinutos2, Global.tiempoSegundos2)
 	_actualizarTimer()
 
 func _actualizarTimer():
@@ -35,7 +35,11 @@ func _on_button_pressed() -> void:
 
 
 func _on_reiniciar_pressed() -> void:
+	Global.tiempoMinutos2 = $Control.minutos
+	Global.tiempoSegundos2 = $Control.segundos
+	
 	get_tree().reload_current_scene()
+	$Control.setearTimer(Global.tiempoMinutos2, Global.tiempoSegundos2)
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

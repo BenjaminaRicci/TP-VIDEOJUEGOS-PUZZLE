@@ -25,7 +25,11 @@ func _on_button_pressed() -> void:
 
 
 func _on_reiniciar_pressed() -> void:
+	Global.tiempoMinutos3 = $Control.minutos
+	Global.tiempoSegundos3 = $Control.segundos
+	
 	get_tree().reload_current_scene()
+	$Control.setearTimer(Global.tiempoMinutos3, Global.tiempoSegundos3)
 
 
 func _input(event):

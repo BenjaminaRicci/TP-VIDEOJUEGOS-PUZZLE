@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
-	$Control.setearTimer(Global.tiempoMinutos, Global.tiempoSegundos)
+	$Control.setearTimer(Global.tiempoMinutos1, Global.tiempoSegundos1)
 	_actualizarTimer()
 
 func _actualizarTimer():
