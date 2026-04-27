@@ -1,6 +1,6 @@
 extends Node
 
-var NivelMax=3
+var NivelMax=1
 
 var tiempoMinutos1=1
 var tiempoSegundos1=15
