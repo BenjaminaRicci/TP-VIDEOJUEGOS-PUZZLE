@@ -14,3 +14,8 @@ func _input(event):
 
 func _on_reiniciar_pressed() -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if(body is RigidBody2D):
+		get_tree().change_scene_to_file("res://EscenasVictoria/VictoriaNivelFacil/ganar_nivel_1.tscn")

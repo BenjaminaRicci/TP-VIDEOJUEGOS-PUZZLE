@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://f0qq88d8mudx"]
+
+[ext_resource type="Texture2D" uid="uid://d1csbe5r0k60i" path="res://ElementosExtra/jaja/GlowingBall Blue 22frames RPG.png" id="1_dnn2n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1mxx"]
+radius = 4.0
+
+[node name="PelotaMedia" type="Node2D" unique_id=594660005]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=203373739]
+continuous_cd = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1057357494]
+position = Vector2(3.625001, -225.294)
+scale = Vector2(0.07226552, 0.07076674)
+texture = ExtResource("1_dnn2n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1406931151]
+position = Vector2(3.250001, -225.62308)
+shape = SubResource("CircleShape2D_l1mxx")
