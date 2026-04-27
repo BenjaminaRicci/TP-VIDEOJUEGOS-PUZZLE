@@ -3,6 +3,8 @@ extends Control
 func _ready() -> void:
 	if Global.NivelMax < 3:
 		Global.NivelMax+=1
+	Global.tiempoMinutos2 = 3
+	Global.tiempoSegundos2 = 0	
 
 func _on_volver_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Menu/Menu.tscn")

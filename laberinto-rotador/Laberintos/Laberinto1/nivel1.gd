@@ -21,6 +21,8 @@ func _on_timer_2_timeout() -> void:
 	_actualizarTimer()
 
 func _on_button_pressed() -> void:
+	Global.tiempoMinutos1 = 1
+	Global.tiempoSegundos1 = 15
 	get_tree().change_scene_to_file("res://Menu/Menu.tscn")
 
 func _input(event):

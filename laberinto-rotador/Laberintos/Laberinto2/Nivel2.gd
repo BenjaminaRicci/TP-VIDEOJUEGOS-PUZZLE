@@ -31,6 +31,8 @@ func _input(event):
 
 
 func _on_button_pressed() -> void:
+	Global.tiempoMinutos2 = 3
+	Global.tiempoSegundos2 = 0
 	get_tree().change_scene_to_file("res://Menu/Menu.tscn")
 
 
