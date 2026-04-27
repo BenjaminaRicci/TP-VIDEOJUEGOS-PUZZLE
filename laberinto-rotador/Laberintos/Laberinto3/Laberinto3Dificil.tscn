@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dyxsmoldfyypy" path="res://Laberintos/Laberinto3/LaberintoDIFICL.gd" id="2_twbwx"]
 [ext_resource type="FontFile" uid="uid://c6sro0iucmiss" path="res://ElementosExtra/TilesIMAGENES/tiles/brackeys_platformer_assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_ixbhp"]
 [ext_resource type="FontFile" uid="uid://dsxbhjj2mgndh" path="res://ElementosExtra/jaja/Pixel Lofi/Pixel Lofi.otf" id="5_twbwx"]
+[ext_resource type="PackedScene" uid="uid://b1w37beabafcl" path="res://Cronometro/Cronometro.tscn" id="7_qhgem"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7r7h"]
 texture = ExtResource("1_mfypp")
@@ -218,6 +219,8 @@ font_color = Color(1, 0.6784314, 0.20392157, 1)
 shadow_size = 8
 shadow_color = Color(0, 0, 0.9411765, 0.9254902)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twbwx"]
+
 [node name="Nivel3" type="Node2D" unique_id=1464164062]
 script = ExtResource("1_i7r7h")
 
@@ -287,6 +290,52 @@ theme_override_font_sizes/font_size = 30
 text = "REINICIAR"
 flat = true
 
+[node name="Cronometro" type="Panel" parent="." unique_id=977658581]
+offset_left = 452.0
+offset_top = 686.0
+offset_right = 475.0
+offset_bottom = 719.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_twbwx")
+
+[node name="TiempoRestante" type="Label" parent="Cronometro" unique_id=1737094591]
+layout_mode = 0
+offset_left = -249.0
+offset_top = -2.0
+offset_right = -2.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(1, 0.6784314, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("5_twbwx")
+theme_override_font_sizes/font_size = 30
+text = "TIEMPO RESTANTE: "
+
+[node name="Minutos" type="Label" parent="Cronometro" unique_id=1592973480]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 41.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(1, 0.6784314, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("5_twbwx")
+theme_override_font_sizes/font_size = 30
+text = "00."
+
+[node name="Segundos" type="Label" parent="Cronometro" unique_id=125512064]
+layout_mode = 0
+offset_left = 41.0
+offset_top = -2.0
+offset_right = 77.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.8980392, 0.6117647, 0.20392157, 1)
+theme_override_fonts/font = ExtResource("5_twbwx")
+theme_override_font_sizes/font_size = 30
+text = "00"
+
+[node name="Control" parent="." unique_id=111897305 instance=ExtResource("7_qhgem")]
+
+[node name="Timer2" type="Timer" parent="Control" unique_id=1318924712]
+autostart = true
+
 [connection signal="body_entered" from="Laberinto/Pivot/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="Titulo/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Titulo/REINICIAR" to="." method="_on_reiniciar_pressed"]
+[connection signal="timeout" from="Control/Timer2" to="." method="_on_timer_2_timeout"]

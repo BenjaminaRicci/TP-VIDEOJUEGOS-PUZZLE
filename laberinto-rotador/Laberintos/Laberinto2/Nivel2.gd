@@ -1,5 +1,25 @@
 extends Node2D
 
+func _ready() -> void:
+	$Control.setearTimer(Global.tiempoMinutos, Global.tiempoSegundos)
+	_actualizarTimer()
+
+func _actualizarTimer():
+	$Cronometro/Minutos.text=str($Control.minutos)
+	$Cronometro/Segundos.text=str($Control.segundos)
+	
+
+func _on_timer_2_timeout() -> void:
+	print("timer funcionando - seg: ", $Control.segundos)
+	if $Control.segundos==0:
+		if $Control.minutos>0:
+			$Control.minutos-=1
+			$Control.segundos=60
+		else:
+			get_tree().change_scene_to_file("res://EscenaDerrota/DerrotaNivelFacil/perder_nivel_1.tscn")
+	$Control.segundos-=1
+	_actualizarTimer()
+
 func _input(event):
 	if Input.is_action_just_pressed("ui_right") or Input.is_action_just_pressed("ui_up"):
 		$Laberinto.rotarMAS90()

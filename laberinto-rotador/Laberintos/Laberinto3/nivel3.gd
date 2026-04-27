@@ -1,5 +1,24 @@
 extends Node2D
 
+func _ready() -> void:
+	$Control.setearTimer(Global.tiempoMinutos3, Global.tiempoSegundos3)
+	_actualizarTimer()
+
+func _actualizarTimer():
+	$Cronometro/Minutos.text=str($Control.minutos)
+	$Cronometro/Segundos.text=str($Control.segundos)
+	
+
+func _on_timer_2_timeout() -> void:
+	print("timer funcionando - seg: ", $Control.segundos)
+	if $Control.segundos==0:
+		if $Control.minutos>0:
+			$Control.minutos-=1
+			$Control.segundos=60
+		else:
+			get_tree().change_scene_to_file("res://EscenaDerrota/DerrotaNivelFacil/perder_nivel_1.tscn")
+	$Control.segundos-=1
+	_actualizarTimer()
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Menu/Menu.tscn")
